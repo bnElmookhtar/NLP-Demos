@@ -17,26 +17,31 @@
 
 ## 🗂️ Project Structure
 Tal5isa/
-├── README.md # Project documentation
-├── app/
-│ ├── init.py # Flask app factory
-│ ├── routes.py # API and web routes
-│ ├── models/ # Model loading and inference code
-│ ├── templates/
-│ │ └── index.html # Main web UI (HTML + Tailwind)
-│ └── utils/ # Utility functions
-├── notebooks/
-│ ├── abstracive.ipynb # Abstractive summarization experiments
-│ └── extractive.ipynb # Extractive summarization experiments
-├── static/
-│ └── assets/
-│ ├── css/ # Custom styles
-│ ├── images/
-│ │ └── logo.png # App logo
-│ └── js/ # Custom scripts
-├── tests/ # Unit and integration tests
-└── trained_models/
-└────  tfidf_vectorizer.pkl # Pretrained vectorizer for extractive summarization
+├── app/                           # Flask backend
+│   ├── __init__.py                # Flask app factory
+│   ├── routes.py                  # API and web routes
+│   ├── models/                    # Model loading and inference
+│   ├── utils/                     # Helper functions
+│   ├── templates/                 # HTML templates
+│   │   └── index.html             # Main UI (HTML + Tailwind)
+│
+├── static/                        # Frontend static assets
+│   └── assets/
+│       ├── css/                   # Custom styles
+│       ├── js/                    # Custom scripts
+│       └── images/
+│           └── logo.png           # App logo
+│
+├── notebooks/                     # Jupyter experiments
+│   ├── abstracive.ipynb           # Abstractive summarization
+│   └── extractive.ipynb           # Extractive summarization
+│
+├── trained_models/                # Pretrained models and vectorizers
+│   └── tfidf_vectorizer.pkl       # TF-IDF vectorizer
+│
+├── tests/                         # Unit and integration tests
+├── README.md                      # Project documentation
+└── requirements.txt               # Python dependencies
 
 
 ---

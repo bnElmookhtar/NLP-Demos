@@ -53,8 +53,3 @@ Tal5isa/
    ```sh
    git clone https://github.com/bnElmookhtar/Tal5isa.git
    cd Tal5isa
-
-
-Notebooks
-    notebooks/abstracive.ipynb: Abstractive summarization with T5 and Pegasus.
-    notebooks/extractive.ipynb: Extractive summarization using TF-IDF and TextRank.

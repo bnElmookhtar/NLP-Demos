@@ -15,6 +15,7 @@
 
 ---
 
+```
 ## 🗂️ Project Structure
 Tal5isa/
 ├── app/                           # Flask backend
@@ -42,7 +43,7 @@ Tal5isa/
 ├── tests/                         # Unit and integration tests
 ├── README.md                      # Project documentation
 └── requirements.txt               # Python dependencies
-
+````
 
 ---
 

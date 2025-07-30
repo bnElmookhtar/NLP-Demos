@@ -4,6 +4,9 @@
 
 ---
 
+![Logo](static/assets/images/logo.png)
+
+
 ## 🚀 Features
 
 - Extractive and abstractive summarization of input text

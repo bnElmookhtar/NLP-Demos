@@ -6,6 +6,9 @@
 
 ![Logo](static/assets/images/logo.png)
 
+## APP screen
+![screen](https://github.com/bnElmookhtar/NLP-Demos/blob/main/Tal5isa/app/static/assets/images/app-page.png?raw=true)
+
 
 ## 🚀 Features
 

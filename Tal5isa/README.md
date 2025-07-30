@@ -59,3 +59,48 @@ Tal5isa/
    ```sh
    git clone https://github.com/bnElmookhtar/Tal5isa.git
    cd Tal5isa
+
+
+2. **Set up a virtual environment:**
+      ```sh
+   python -m venv venv
+   source venv/bin/activate  # On Windows use: venv\Scripts\activate
+
+3. **Install dependencies:**
+   ```sh
+   pip install -r requirements.txt
+
+4. **Run the FastAPI server:**
+   ```sh
+   uvicorn app.main:app --reload
+
+5. **Open the app:**
+   ```sh
+   http://127.0.0.1:8000
+   
+
+
+##  Technologies Used
+
+- **FastAPI**  
+  A high-performance web framework for building modern APIs with Python 3.7+.
+
+- **Transformers (Hugging Face)**  
+  For loading and running state-of-the-art NLP models like T5 for abstractive summarization.
+
+- **Tailwind CSS**  
+  A utility-first CSS framework used for responsive and clean UI styling.
+
+- **Jinja2**  
+  Lightweight templating engine used to render HTML pages with dynamic data.
+
+- **Uvicorn**  
+  ASGI web server used to serve the FastAPI app in production and development.
+
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-Framework-00cc99?logo=fastapi)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-Utility--First-38bdf8?logo=tailwindcss)
+![HTML5](https://img.shields.io/badge/HTML-5-orange?logo=html5)
+![Transformers](https://img.shields.io/badge/Transformers-HuggingFace-yellow?logo=huggingface)
+
+

@@ -6,11 +6,13 @@
 ## 🚀 Features
 
 - Text summarization (Extractive & Abstractive)
+- Text to speech 
 
 ---
 
 ## 🗂️ Demo Structure
 
 ├── Tal5ia
+├── VoclaWeave
  
 

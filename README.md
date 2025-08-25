@@ -7,12 +7,14 @@
 
 - Text summarization (Extractive & Abstractive)
 - Text to speech 
-
+- Smart CV Customizer
 ---
 
 ## 🗂️ Demo Structure
 
 
 ├── Tal5ia
+├── TailorCV => Your smart AI CV assistent 
+
  
 

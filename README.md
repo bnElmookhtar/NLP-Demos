@@ -12,9 +12,10 @@
 
 ## 🗂️ Demo Structure
 
-
-├── Tal5ia
-├── TailorCV => Your smart AI CV assistent 
+| Demo      | Description                     |
+|-----------|---------------------------------|
+| Tal5ia    | Text summarization app          |
+| TailorCV  | Your smart AI CV assistant      |
 
  
 

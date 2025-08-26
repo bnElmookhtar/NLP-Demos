@@ -15,7 +15,7 @@ Users upload a CV (PDF) and provide a Job Description. The system analyzes both 
 ---
 
 ## Project Structure 
-
+```
 tailorcv/
 ├── backend
 │ ├── routes/
@@ -28,4 +28,4 @@ tailorcv/
 │ │
 │ ├── README.md
 │ └── requirements.txt
-
+```

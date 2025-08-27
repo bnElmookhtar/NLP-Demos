@@ -25,7 +25,15 @@ tailorcv/
 │ │ ├── analyzer.py # Core logic to compare CV and JD
 │ │ ├── pdf_parser.py # Extracts text from PDF CVs
 │ │ └── preprocessing.py # Cleans & prepares job description for analysis
-│ │
-│ ├── README.md
-│ └── requirements.txt
+│ 
+├── frontend
+│ ├── index.html    # Home page for this site
+│ ├── assets/
+│ │ ├── images
+| | |    ├── logo.png    # App logo
+│ │ ├── css
+| | |    └── styles.css # The style of the home page
+│ | |
+├── README.md
+├── requirements.txt
 ```

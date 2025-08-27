@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart CV Customizer</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <header>
+    <div class="wrap header-row">
+      <div class="logo" aria-hidden="true"><span>CV</span></div>
+      <div>
+        <div class="title">Smart CV Customizer</div>
+        <div class="subtitle">Tailor your CV to any Job Description — quickly & responsibly.</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Left: Inputs -->
+      <section class="card" aria-labelledby="jd-title">
+        <div class="card-head">
+          <h2 id="jd-title">Job Description</h2>
+          <p class="muted">Paste the job description below (يمكنك لصق الوصف الوظيفي هنا).</p>
+        </div>
+        <div class="card-body">
+          <textarea id="jobDesc" placeholder="Paste the job description…"></textarea>
+          <div class="actions">
+            <button id="sampleBtn" class="btn secondary" type="button">Use sample JD</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right: Uploader -->
+      <aside class="card" aria-labelledby="cv-title">
+        <div class="card-head">
+          <h2 id="cv-title">Upload your CV</h2>
+          <p class="muted">PDF / DOC / DOCX / TXT (السيرة الذاتية)</p>
+        </div>
+        <div class="card-body">
+          <label for="cvInput" class="uploader" id="drop">
+            <input id="cvInput" type="file" accept=".pdf,.doc,.docx,.txt" />
+            <div>
+              <div style="font-weight:600; margin-bottom:6px;">Click to choose a file or drag & drop</div>
+              <div class="hint">Max 10MB • Single file</div>
+            </div>
+            <div class="files" id="fileList" aria-live="polite"></div>
+          </label>
+          <div class="actions">
+            <button id="analyzeBtn" class="btn primary" type="button">Analyze</button>
+            <div class="loading" id="loading"><div class="spinner"></div><span class="muted">Analyzing…</span></div>
+          </div>
+          <div id="error" class="error" role="alert"></div>
+        </div>
+      </aside>
+
+      <!-- Full width: Results -->
+      <section class="card" id="results" style="grid-column:1/-1" aria-labelledby="rec-title">
+        <div class="card-head">
+          <h2 id="rec-title">Recommendations</h2>
+          <p class="muted">Generated suggestions to tailor your CV to the provided JD. Replace with your LLM output when ready.</p>
+        </div>
+        <div class="card-body">
+          <div id="matchSummary" class="badge" style="display:none"></div>
+          <div id="keywords" style="margin-top:10px"></div>
+          <ul id="recList" class="rec-list"></ul>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <small>Frontend demo – plug your API endpoint in <code>runAnalysis()</code>.
+        • Built for developers who want a clean, modern UX.
+      </small>
+    </footer>
+  </main>
+
+
+</body>
+</html>

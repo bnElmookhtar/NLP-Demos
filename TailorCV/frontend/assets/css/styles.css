@@ -191,3 +191,15 @@ textarea:focus {
   margin-top:.5rem;
   font-size:.9rem;
 }
+
+#floating-img {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  z-index: 9999;
+  animation: verticalMove 6s linear infinite;
+}
+

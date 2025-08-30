@@ -1,7 +1,12 @@
 from pypdf import PdfReader
 
-def extract_cv_content(cv):
-    pdf = PdfReader(cv)
+from pypdf import PdfReader
+
+def extract_cv_content(file_obj):
+    """
+    Extract text from uploaded CV PDF (file-like object).
+    """
+    pdf = PdfReader(file_obj)
     pages = [page.extract_text() for page in pdf.pages]
     return "\n".join(pages)
 

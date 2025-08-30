@@ -1,11 +1,12 @@
+# main.py
+import os
+import json
+from dotenv import load_dotenv
 from langchain.prompts import PromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
-import json
+
 from preprocessing import extract_keywords_rake, clean_job_description
 
-# Init LLM
-import os
-from dotenv import load_dotenv
 load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
@@ -35,7 +36,6 @@ Here is the CV:
 {cv_text}
 """
 
-
 prompt = PromptTemplate(
     input_variables=["job_description", "cv_text"],
     template=template
@@ -43,10 +43,8 @@ prompt = PromptTemplate(
 
 chain = prompt | llm
 
+
 def rewrite_cv_for_job(job_description: str, cv_text: str) -> dict:
-    """
-    Rewrite CV based on job description and return JSON with matchScore + keywords.
-    """
     job_description_clean = clean_job_description(job_description)
 
     response = chain.invoke({
@@ -59,10 +57,11 @@ def rewrite_cv_for_job(job_description: str, cv_text: str) -> dict:
     except json.JSONDecodeError:
         rewritten_cv = {"raw_response": response.content}
 
-    # ضمان وجود matchScore و recommendedKeywords حتى لو الموديل ما رجعهمش
     if "matchScore" not in rewritten_cv:
         rewritten_cv["matchScore"] = 0
     if "recommendedKeywords" not in rewritten_cv:
         rewritten_cv["recommendedKeywords"] = extract_keywords_rake(job_description_clean)
+    
+    
 
     return rewritten_cv

@@ -18,22 +18,24 @@ Users upload a CV (PDF) and provide a Job Description. The system analyzes both 
 ```
 tailorcv/
 ├── backend
-│ ├── routes/
-│ │ └── cv_routes.py # API routes for CV analysis
-│ │
 │ ├── services/
-│ │ ├── analyzer.py # Core logic to compare CV and JD
-│ │ ├── pdf_parser.py # Extracts text from PDF CVs
-│ │ └── preprocessing.py # Cleans & prepares job description for analysis
-│ 
+│ │ ├── analyzer.py       # Core logic to compare CV and JD
+│ │ ├── pdf_parser.py     # Extracts text from PDF CVs
+│ │ ├── preprocessing.py  # Cleans & prepares job description for analysis
+| | └── main.py           # API for dealing with frontend 
+│ └── Dockerfile          # Docker file for backend
+|
+|
 ├── frontend
-│ ├── index.html    # Home page for this site
-│ ├── assets/
-│ │ ├── images
-| | |    ├── logo.png    # App logo
-│ │ ├── css
-| | |    └── styles.css # The style of the home page
-│ | |
+│ ├── index.html            # Home page for this site
+│ └── assets/
+│      ├── images
+|      |    ├── logo.png    # App logo
+│      ├── css
+|      |    └── styles.css  # The style of the home page
+|      └── Js
+|          └── scripts.js   # Home page interactions
+│ 
 ├── README.md
-├── requirements.txt
+└── requirements.txt
 ```

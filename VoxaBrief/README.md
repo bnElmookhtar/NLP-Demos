@@ -15,7 +15,7 @@ This project demonstrates an end-to-end **speech-to-text and summarization pipel
 - **Automatic preprocessing:** Converts audio to mono, 16kHz WAV for optimal model performance.  
 
 
-
+```
 VoxaBrief/
 │
 ├── app/
@@ -36,3 +36,4 @@ VoxaBrief/
 ├── Dockerfile # Optional containerization
 ├── .env # Environment variables (keys, tokens)
 └── README.md # Project documentation
+```
